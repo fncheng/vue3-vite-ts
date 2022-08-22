@@ -1,19 +1,26 @@
 <script lang="tsx">
-import { defineComponent, useCssModule } from 'vue'
-
-
-const $style = useCssModule()
-console.log('$style: ', $style);
+import { defineComponent, inject } from 'vue'
 
 export default defineComponent({
   name: 'MyButton',
+  setup() {
+    const myName = inject('username')
+    console.log('myName', myName)
+  },
+  created() {
+    console.log('MyButton has changed!')
+  },
+  updated() {
+    console.log('MyButton has updated!')
+  },
   render() {
+    console.log('MyButton has render!')
     return <div>Button</div>
   }
 })
 </script>
 
-<style module>
+<style scoped module>
 .red {
   color: red;
 }

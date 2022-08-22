@@ -5,7 +5,6 @@ import Index from './views/Index.vue';
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
   <Index />
 </template>
 

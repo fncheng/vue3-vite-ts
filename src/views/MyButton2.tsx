@@ -3,7 +3,9 @@ import { defineComponent, ref } from 'vue'
 const count = ref(10)
 
 type MyButton2Props = {
+  /** some */
   name: string
+  /** test */
   age: number
 }
 
